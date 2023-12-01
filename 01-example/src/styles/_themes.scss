@@ -1,0 +1,17 @@
+html {
+  --clr-primary: #44633f;
+  --clr-primary-light: #9ebc9f;
+  --clr-dark: #230903;
+  --clr-light: #f4f2f3;
+  //   Elements
+  --clr-sectionTitle: #230903;
+}
+
+html[data-theme="santa"] {
+  --clr-primary: #226f54;
+  --clr-primary-light: #87c38f;
+  --clr-dark: #43291f;
+  --clr-light: #f4f0bb;
+  //   Elements
+  --clr-sectionTitle: #da2c38;
+}
