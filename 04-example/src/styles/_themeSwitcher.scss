@@ -1,0 +1,56 @@
+.switch {
+    --size: 1.375rem;
+    --gap: (var(--size) * 0.2);
+    --color: var(--clr-primary);
+    --color-icon: var(--clr-page-bg);
+  
+    width: calc(2 * var(--size) + var(--gap));
+    border: 1px solid var(--color);
+    border-radius: calc(var(--size) * 0.75);
+    padding: 0.125rem;
+    cursor: pointer;
+  
+    &.visible .icon{
+      opacity: 1;
+    }
+  
+    .icon {
+      width: var(--size);
+      aspect-ratio: 1/1;
+      border-radius: 100%;
+      position: relative;
+      left: 0;
+      transform: rotate(0);
+   
+      transition: all 400ms ease-in-out;
+      .sun,
+      .moon {
+        width: 85%;
+        aspect-ratio: 1/1;
+        fill: var(--color-icon);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        transition: opacity 400ms ease-in-out;
+      }
+    }
+  
+    &.normal {
+      .sun {
+        opacity: 0;
+      }
+    }
+  
+    &.santa {
+      --color-icon: var(--clr-page-bg-inverse);
+      .icon {
+        transform: rotate(360deg);
+        left: calc(var(--size) + var(--gap));
+      }
+      .moon {
+        opacity: 0;
+      }
+    }
+  }
