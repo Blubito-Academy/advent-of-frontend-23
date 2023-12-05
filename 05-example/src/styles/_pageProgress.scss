@@ -1,0 +1,14 @@
+.pageProgress {
+  position: sticky;
+  top: 56px; // The height of the nav
+  left: 0px;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--clr-primary-light);
+  .bar {
+    height: 0.25rem;
+    background-color: var(--clr-primary);
+    width: var(--pageProgress, 43%);
+    // transition: all 300ms ease-in-out;
+  }
+}
