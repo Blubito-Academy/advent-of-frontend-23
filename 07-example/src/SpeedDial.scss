@@ -1,0 +1,126 @@
+.speedDial {
+  --distance: 4rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  color: #f3f3f3;
+
+  .actions {
+    transition: all 300ms;
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    max-height: max-content;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  li,
+  .actionBtn {
+    border-radius: 50%;
+    font-size: 1rem;
+    background: #a3b763;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem auto;
+    cursor: pointer;
+  }
+
+  .actionBtn {
+    background: #860a35;
+    padding: 1.5rem;
+
+    svg {
+      transition: transform 300ms;
+    }
+
+    &.open {
+      background: lighten(#860a35, 15%);
+
+      svg {
+        transform: rotate(45deg);
+        transition: transform 300ms;
+      }
+    }
+  }
+
+  .action {
+    transition: all 300ms;
+    transform: translateY(2rem) scale(0);
+    opacity: 0;
+    height: 0;
+    --translateVal: -125%;
+    --translateValHover: -100%;
+
+    &:hover {
+      background: lighten(#a3b763, 10%);
+      .tooltip {
+        transform: translateX(var(--translateValHover)) scale(1);
+        opacity: 1;
+      }
+    }
+
+    &.open {
+      transition: all 300ms;
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      margin: 0.5rem auto;
+      padding: 1rem;
+      height: auto;
+    }
+
+    .tooltip {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.85rem;
+      position: absolute;
+      left: -1rem;
+      transform: translateX(var(--translateVal));
+      background-color: rgba(#860a35, 0.8);
+      border-radius: 0.25rem;
+      color: white;
+      opacity: 0;
+      transition: transform 300ms, opacity 100ms;
+      user-select: none;
+      white-space: nowrap;
+    }
+  }
+
+  // position left
+  &.left {
+    left: var(--distance);
+
+    .action .tooltip {
+      right: 1rem;
+      left: unset;
+      --translateVal: 100%;
+      --translateValHover: 125%;
+    }
+  }
+
+  // position right
+  &.right {
+    right: var(--distance);
+  }
+
+  // position top
+  &.top {
+    top: var(--distance);
+    flex-direction: column;
+
+    .actions {
+      flex-direction: column;
+    }
+  }
+
+  // position bottom
+  &.bottom {
+    bottom: var(--distance);
+  }
+
+  // position center X
+  &.center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
