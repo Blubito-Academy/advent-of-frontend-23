@@ -1,0 +1,21 @@
+@use './reset';
+@use './themes';
+
+/* Custom styles specific to this page */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+}
+a {
+  text-decoration: none;
+  color: var(--clr-primary);
+  transition: color 300ms ease-in-out;
+}
+a:hover {
+  color: #9ebc9f;
+}
+
