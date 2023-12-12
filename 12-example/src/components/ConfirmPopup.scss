@@ -1,0 +1,40 @@
+.confirmWrapper{
+    display: inline-block;
+    position: relative;
+}
+
+.confirmWrapper .confirm{
+    position: absolute;
+    top: var(--top, 100%);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: #ffffff;
+    color: black;
+    border: 0 none;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    max-width: 20rem;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    &.visible{
+opacity: 1;
+    }
+    .titleRow{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+margin-bottom: 1rem;
+        .title{
+            font-size: inherit;
+        }
+    }
+    .btnRow{
+        display: flex;
+        gap: 0.5rem;
+        justify-content: flex-end;
+    }
+}
