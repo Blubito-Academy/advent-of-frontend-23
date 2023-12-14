@@ -1,0 +1,60 @@
+.timer {
+  width: 100%;
+
+  .img_container {
+    position: relative;
+    height: 20rem;
+    margin-bottom: 2rem;
+    .message {
+      z-index: 2;
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      height: 100%;
+      opacity: 0.5;
+    }
+  }
+
+  .countdown_container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10rem;
+    min-width: 50%;
+
+    .card {
+      height: 100%;
+      width: 15%;
+      min-width: 4rem;
+      border-radius: 2.5rem;
+      border: 0.1px solid rgb(255 255 255 / 0.18);
+      border-bottom-color: rgba(227, 211, 196, 0.6);
+      border-bottom-width: 0.6rem;
+      border-top-color: rgba(227, 211, 196, 0.6);
+      border-top-width: 0.4rem;
+      padding: 1rem;
+      background-image: linear-gradient(
+        rgba(175, 137, 90, 0.8),
+        rgba(255, 255, 255, 0.5)
+      );
+
+      font-family: "Mountains of Christmas", serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      p {
+        margin: 0;
+        font-size: x-large;
+      }
+      span {
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 6rem;
+      }
+    }
+  }
+}

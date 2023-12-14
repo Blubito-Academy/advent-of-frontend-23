@@ -1,0 +1,48 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+  background-color: #115a5b;
+
+  h1 {
+    font-family: "Mountains of Christmas", serif;
+    margin-top: 5rem;
+  }
+
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-size: contain;
+    background-repeat: repeat;
+  }
+  .clouds {
+    background-image: url("./assets/clouds.png");
+  }
+  .snow {
+    background-image: url("./assets/snow.png");
+  }
+
+  .img_container {
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    .sleigh {
+      display: block;
+      margin-right: 40%;
+      margin-left: auto;
+      max-width: 100%;
+      height: 100%;
+      opacity: 0.5;
+    }
+  }
+}
