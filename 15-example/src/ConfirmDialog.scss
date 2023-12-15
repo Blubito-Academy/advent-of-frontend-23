@@ -1,0 +1,115 @@
+.overlay {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1101;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modeless {
+  position: fixed;
+  left: 40%;
+  top: 40%;
+}
+
+.dialog {
+  position: relative;
+  border: none;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  font-weight: normal;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+
+    p {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    button {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: #6b7280;
+      align-items: center;
+      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      &:hover {
+        width: 2rem;
+        height: 2rem;
+        color: #374151;
+        background: #f3f4f6;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #4b5563;
+    padding: 0 1.5rem 2rem 1.5rem;
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+    p {
+      margin: 0 0 0 1rem;
+    }
+  }
+
+  .footer {
+    color: #4b5563;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    text-align: right;
+
+    button {
+      margin: 0 0.5rem 0 0;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+        box-shadow 0.2s;
+      background: #06b6d4;
+      border: 1px solid #06b6d4;
+      color: #ffffff;
+
+      &:hover {
+        cursor: pointer;
+        background: #0891b2;
+        border-color: #0891b2;
+      }
+
+      &.text {
+        background-color: transparent;
+        border: none;
+        color: #06b6d4;
+        &:hover {
+          cursor: pointer;
+          background: rgba(6, 182, 212, 0.04);
+        }
+      }
+    }
+  }
+}

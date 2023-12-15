@@ -1,0 +1,26 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  button {
+    margin-top: 100px;
+    width: 10%;
+    border: none;
+    border-radius: 5px;
+    background: #de4c4c;
+
+    &:hover {
+      cursor: pointer;
+      background: #a41623;
+    }
+  }
+  p {
+    align-self: flex-start;
+  }
+}
