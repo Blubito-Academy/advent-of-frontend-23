@@ -1,6 +1,10 @@
 import "./App.css";
+import ThemeSwitcher from "./ThemeSwitcher";
+import { useTheme } from "./useTheme";
 
 function App() {
+  useTheme();
+
   return (
     <>
       <header className="header">
@@ -28,6 +32,8 @@ function App() {
             transform="translate(-1.83 -1.82)"
           />
         </svg>
+
+        <ThemeSwitcher />
 
         <nav className="nav">
           <ul role="list" className="page-links">
