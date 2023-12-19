@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+
+    .state {
+      width: 100px;
+    }
+
+    .inputs {
+      width: 500px;
+      height: 500px;
+    }
+    
+    .todoList {
+      flex-grow: 1;
+      background-color: lightgreen;
+      overflow: auto;
+      width: 300px;
+      max-height: 20rem;
+
+      .todoElement {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 1rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+}
+
