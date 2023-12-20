@@ -1,0 +1,34 @@
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 600px;
+  aspect-ratio: 1/1;
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.box {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875em;
+  font-weight: 300;
+  aspect-ratio: 1;
+  border: 1px solid var(--gray-l);
+}
+
+
+.land {
+  background-color: green;
+  transition: background-color 0.8s ease;
+}
+
+.water {
+  background-color: blue;
+  transition: background-color 0.8s ease;
+}
+
+.fire {
+  background-color: red;
+  transition: background-color 0.8s ease;
+}
