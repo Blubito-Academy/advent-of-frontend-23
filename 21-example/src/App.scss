@@ -1,0 +1,54 @@
+@use './colors.scss';
+
+#root {
+  width: 100%;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  flex: 1;
+  flex-grow: 1;
+  background-color: colors.$bgClr;
+  overflow: auto;
+
+  .title {
+    padding-top: 2rem;
+    display: block;
+    text-align: center;
+
+    img {
+      display: block;
+      max-width: 24rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      font-family: 'Mountains of Christmas', serif;
+      text-align: center;
+      font-size: 3rem;
+      color: colors.$textClr;
+      padding: 1rem;
+    }
+  }
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  flex-grow: 1;
+  padding: 2rem 10% 4rem;
+  max-height: 100%;
+  background-color: colors.$bgClr;
+
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
+}

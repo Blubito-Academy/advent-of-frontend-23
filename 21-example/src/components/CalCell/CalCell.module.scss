@@ -1,0 +1,123 @@
+
+@use '../../colors.scss';
+
+.cell {
+  position: relative;
+  border: 1px solid colors.$textClr;
+  padding: 0;
+  display: inline-block;
+  font-family: 'Mountains of Christmas', serif;
+
+  .pane {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: linear-gradient(
+      135deg,
+      colors.$bgClr 50%,
+      lighten(rgb(7 25 58), 7%) 50%
+    );
+    transform-style: preserve-3d;
+    transform-origin: 0;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(colors.$textClr, 0.15);
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    z-index: 1;
+
+    h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      font-size: 2em;
+      line-height: inherit;
+      color: white;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: calc(100% - 2rem);
+      padding: 0.25rem;
+      background: rgba(white, 0.3);
+      border-radius: 50%;
+    }
+  }
+
+  .content {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: colors.$bgClr;
+    color: colors.$textClr;
+
+    h4 {
+      display: block;
+    }
+
+    a {
+      position: absolute;
+      width: 90%;
+      height: 4rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: colors.$textClr;
+    }
+  }
+
+  // open box styles
+  &.open {
+    z-index: 999;
+    border-left: transparent;
+    border-bottom: transparent;
+
+    .pane {
+      background: linear-gradient(
+        135deg,
+        lighten(colors.$bgClr, 10%) 50%,
+        lighten(colors.$bgClr, 5%) 50%
+      );
+      transform: rotateY(-97deg);
+      perspective-origin: 0;
+      transition: all 0.5s ease-in;
+
+      img {
+        backface-visibility: hidden;
+      }
+    }
+
+    .content {
+      img {
+        z-index: -1;
+        opacity: 0.2;
+        background: transparent;
+        padding: 0;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: calc(100% - 2rem);
+    padding: 0.25rem;
+    background: rgba(white, 0.3);
+    border-radius: 50%;
+  }
+
+  @media (max-width: 767px) {
+    .pane img {
+      height: 80%;
+    }
+  }
+}
