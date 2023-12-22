@@ -148,7 +148,7 @@ a:hover {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: var(--font-size);
   position: relative;
   z-index: 1;
   /* color: var(--main-bg-clr); */
@@ -163,13 +163,13 @@ a:hover {
 }
 
 .about-us h2 {
-  font-size: 2.5rem;
+  font-size: var(--font-size);
   color: var(--main-text-clr);
   margin-bottom: 30px;
 }
 
 .about-us p {
-  font-size: 1.2rem;
+  font-size: var(--font-size);
   line-height: 1.6;
   color: var(--main-text-clr);
 }
@@ -194,7 +194,7 @@ a:hover {
 }
 
 .features h2 {
-  font-size: 2.5rem;
+  font-size: var(--font-size);
   color: var(--main-text-clr);
   margin-bottom: 30px;
 }
@@ -220,14 +220,14 @@ a:hover {
 }
 
 .features .feature h3 {
-  font-size: 1.75rem;
+  font-size: var(--font-size);
   color: #333;
   margin-bottom: 1rem;
   color: var(--main-bg-clr-hover);
 }
 
 .features .feature p {
-  font-size: 1.2rem;
+  font-size: var(--font-size);
   line-height: 1.6;
 }
 
@@ -239,7 +239,7 @@ a:hover {
 }
 
 .contact-us h2 {
-  font-size: 2.5rem;
+  font-size: var(--font-size);
   color: var(--main-text-clr);
   margin-bottom: 30px;
 }
@@ -249,7 +249,7 @@ a:hover {
 }
 
 .contact-info p {
-  font-size: 1.2rem;
+  font-size: var(--font-size);
   color: #666;
   margin-bottom: 10px;
 }
@@ -265,7 +265,7 @@ a:hover {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.5rem 0.75rem;
-  font-size: 1rem;
+  font-size: var(--font-size);
   border-radius: 0.5rem;
   border: 2px solid var(--main-bg-clr-hover);
 }

@@ -3,6 +3,7 @@
   --main-bg-clr: #9ebc9f;
   --main-bg-clr-hover: #44633f;
   --main-body-clr: #f4f2f3;
+  --font-size: 16px;
 }
 
 :root[data-theme="santa"] {
@@ -10,4 +11,5 @@
   --main-bg-clr: #87c38f;
   --main-bg-clr-hover: #226f54;
   --main-body-clr: #43291f;
+  --font-size: 16px;
 }

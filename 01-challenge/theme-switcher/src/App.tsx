@@ -1,4 +1,5 @@
 import "./App.css";
+import FontSlider from "./FontSlider";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { useTheme } from "./useTheme";
 
@@ -34,6 +35,7 @@ function App() {
         </svg>
 
         <ThemeSwitcher />
+        <FontSlider />
 
         <nav className="nav">
           <ul role="list" className="page-links">
